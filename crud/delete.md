@@ -3,8 +3,8 @@
 ## 清空表
 
 ```
-delete from table_name;
-truncate table table_name;
+DELETE FROM table_name;
+TRUNCATE TABLE table_name;
 ```
 
 - truncate是整体删除，delete是逐条删除，truncate速度更快
@@ -15,5 +15,9 @@ truncate table table_name;
 ## 删除表
 
 ```
-drop table table_name;
+DROP TABLE table_name;
 ```
+
+## Practice
+
+- [Leetcode_0196](https://leetcode-cn.com/problems/delete-duplicate-emails/)
