@@ -1,15 +1,28 @@
-# catalog
+# 目录
 
-## environment
+- Setup
+  - [Build mysql by docker](setup/build_mysql_by_docker.md)
+  - [Simple demo](setup/simple_demo.md)
 
-- build mysql by docker
-- simple demo
+- CRUD
+  - [Create](crud/create.md)
+  - [Retrieve](crud/retrieve.md)
+  - [Update](crud/update.md)
+  - [Delete](crud/delete.md)
 
-## crud
+- [Functions](functions/functions.md)
+  - [Join](functions/join.md)
+  - [Union](functions/union.md)
+  - [Where vs Having](where_vs_having.md)
 
-- create
-- retrieve
-- update
-- delete
+- [Key & Index](key_index/key_index.md)
+
+- [Optimize](optimize/optimize.md)
+
+- Security
+  - [Injection](security/injection.md)
+
+- [Stored procedure 存储过程](stored_procedure/stored_procedure.md)
+  - [Delimiter 定界符](stored_procedure/delimiter.md)
 
 ## permission

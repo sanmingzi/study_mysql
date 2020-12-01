@@ -9,6 +9,8 @@
 
 ## 示例
 
+- HAVING 可以使用别名
+
 ```SQL
 mysql> SELECT name AS n, sex AS s FROM students WHERE n = 'b';
 ERROR 1054 (42S22): Unknown column 'n' in 'where clause'
@@ -22,6 +24,8 @@ mysql> SELECT name AS n, sex AS s FROM students HAVING n = 'b';
 1 row in set (0.00 sec)
 ```
 
+- WHERE 可以使用表中的全部字段
+
 ```SQL
 mysql> SELECT name FROM students WHERE sex = 'b';
 +------+
@@ -34,6 +38,8 @@ mysql> SELECT name FROM students WHERE sex = 'b';
 mysql> SELECT name FROM students HAVING sex = 'b';
 ERROR 1054 (42S22): Unknown column 'sex' in 'having clause'
 ```
+
+- HAVING 可以使用统计函数
 
 ```SQL
 mysql> SELECT COUNT(name), birth FROM students WHERE COUNT(name) > 0 GROUP BY birth;

@@ -1,9 +1,17 @@
-# delete
+# Delete
+
+## 删除数据
+
+```
+DELETE FROM table_name WHERE conditions;
+DELETE table0, table1 FROM table0, table1 WHERE conditions;
+```
 
 ## 清空表
 
 ```
 DELETE FROM table_name;
+DELETE table0, table1 FROM table0, table1;
 TRUNCATE TABLE table_name;
 ```
 
@@ -18,6 +26,33 @@ TRUNCATE TABLE table_name;
 DROP TABLE table_name;
 ```
 
+## Demo
+
+| Id | Email            |
+|----|------------------|
+| 1  | john@example.com |
+| 2  | bob@example.com  |
+| 3  | john@example.com |
+
+```
+要求删除重复的电子邮件，重复的邮箱只保留 Id 最小的那个。
+```
+
+- 方法1
+
+```sql
+DELETE FROM person WHERE Id NOT IN
+  (SELECT min_id 
+    FROM (SELECT MIN(Id) as min_id FROM person GROUP BY email) AS min_ids);
+```
+
+- 方法2
+
+```sql
+DELETE p1 FROM person AS p1, person AS p2
+  WHERE p1.Email = p2.Email AND p1.Id > p2.Id;
+```
+
 ## Practice
 
-- [Leetcode_0196](https://leetcode-cn.com/problems/delete-duplicate-emails/)
+- [LeetCode 0196 删除重复的电子邮箱](https://leetcode-cn.com/problems/delete-duplicate-emails/)
