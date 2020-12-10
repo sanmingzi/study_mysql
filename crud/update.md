@@ -21,4 +21,4 @@ UPDATE salary SET sex = (CASE sex WHEN 'm' THEN 'f' ELSE 'm' END);
 
 ## Practice
 
-- [LeetCode 0627 变更性别](https://leetcode-cn.com/problems/swap-salary/submissions/)
+- [LeetCode 0627 变更性别](https://leetcode-cn.com/problems/swap-salary/)
