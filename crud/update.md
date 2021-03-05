@@ -17,6 +17,8 @@ UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition1;
 现在要求变更每一行的 sex，只能写一条 UPDATE，并且不能使用 SELECT。
 
 UPDATE salary SET sex = (CASE sex WHEN 'm' THEN 'f' ELSE 'm' END);
+
+UPDATE salary SET sex = IF(sex = 'f', 'm', 'f');
 ```
 
 ## Practice
