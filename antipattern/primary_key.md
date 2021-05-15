@@ -1,4 +1,4 @@
-# 需要 ID
+# 主键 (Primary Key)
 
 ## 场景
 
